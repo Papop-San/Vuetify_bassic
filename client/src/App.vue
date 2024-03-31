@@ -11,22 +11,19 @@
       <v-container fluid>
         <h2>Attractions</h2>
         <v-row dense>
-          <v-col 
-            v-for="item in items"
-            :key="item.id"
-            cols="12" sm="4"
-          >
+          <v-col v-for="item in items" :key="item.id" cols="12" sm="4">
             <v-card>
-              <v-img
-                :src="item.coverimage" 
-                height="200px"
-                class="align-end"
-                cover
-              >
-                <v-card-title>{{ item.name }}</v-card-title>
+              <v-img :src="item.coverimage" height="200px" class="align-end" cover>
+                <v-card-title style="color: white">{{ item.name }}</v-card-title>
               </v-img>
               <v-card-text>{{ item.detail }}</v-card-text>
+              <v-card-actions>
+                <v-btn>
+                  Learn More
+                </v-btn>
+              </v-card-actions>
             </v-card>
+
           </v-col>
         </v-row>
       </v-container>
